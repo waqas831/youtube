@@ -3,16 +3,17 @@ import styled from 'styled-components'
 import HeaderLogoAndBar from './HeaderLogoAndBar';
 import HeaderSearch from './HeaderSearch';
 import HeaderUserAndNotification from './HeaderUserAndNotification';
-import '../style/header_style.css';
-const MainHeader = () => {
+import '../../style/header_style.css';
+interface Props{
+    setIsOpen:any;
+    open:boolean;
+}
+const MainHeader = ({setIsOpen,open}:Props) => {
     return (
         <MainContainer>
             <HeaderLogoAndBar />
-            {/* <div style={{display:'flex',justifyContent:'space-between',alignItems:'center',borderBottom:'2px solid #ccc'}}> */}
-
-                <HeaderSearch />
-                <HeaderUserAndNotification />
-            {/* </div> */}
+            <HeaderSearch />
+            <HeaderUserAndNotification setIsOpen={setIsOpen} open={open} />
         </MainContainer>
     )
 }

@@ -2,12 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 import ShowMainList from '../detail/ShowMainList'
 import SideBar from '../sidebar/SideBar'
-
-const SideBarAndMainWrapper = () => {
+interface Props{
+    open:boolean
+}
+const SideBarAndMainWrapper = ({open}:Props) => {
     return (
         <MainSideBarAndMainWrapper>
             <SideBar />
-            <ShowMainList />
+            <ShowMainList open={open} />
         </MainSideBarAndMainWrapper>
     )
 }

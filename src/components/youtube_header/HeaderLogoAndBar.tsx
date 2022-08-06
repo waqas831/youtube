@@ -1,11 +1,11 @@
 import React from 'react'
 import styled from 'styled-components'
-import '../style/header_style.css'
+import '../../style/header_style.css'
 import { GoThreeBars } from "react-icons/go";
 import { GrYoutube } from "react-icons/gr";
 const HeaderLogoAndBar = () => {
   return (
-    <MainHeaderLogoBar className="flex justify-evenly" >
+    <MainHeaderLogoBar style={{width:'15%'}} className="flex justify-evenly" >
       <div className="main_bar_container">
         <GoThreeBars className='icon' />
       </div>
@@ -17,7 +17,7 @@ const HeaderLogoAndBar = () => {
 
           <h5 className='text-black text-2xl ml-1 font-mono subpixel-antialiased font-bold'> YouTube
           </h5>
-          <span className="absolute font-normal left-24 bottom-4 ml-1">PK</span>
+          <span className="absolute font-normal left-24 bottom-4 ml-0">PK</span>
         </div>
       </div>
     </MainHeaderLogoBar>

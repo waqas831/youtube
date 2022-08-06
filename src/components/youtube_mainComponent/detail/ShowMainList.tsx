@@ -1,16 +1,19 @@
 import React, { useEffect, useState } from 'react'
 import AllCategories from '../../../constants/SideBarBottomCatagories';
 import ShowMainListItems from './ShowMainListItems';
-import {YouTubeData} from '../../../constants/YouTubeVideosData';
-
+import { YouTubeData } from '../../../constants/YouTubeVideosData';
+import HeaderNotification from '../../../models/notifications/HeaderNotification';
+interface Props {
+  open: boolean
+}
 export const ShowCategories = () => {
   return (
     <>
-      <div style={{ display: 'flex', alignItems: 'center', borderTop: '2px solid #ccc', borderBottom: '2px solid #ccc' }}>
+      <div className="categories_main_div flex items-center">
         {
           AllCategories.map((item, index) => {
             return (
-              <div style={{ backgroundColor: '#CCC', border: '2px solid #FFF', padding: '5px',marginTop:'2px',marginBottom:'2px', marginLeft: '10px', borderRadius: '100px' }}>
+              <div className="categories_title_div">
                 <div
                   key={index}>{item.title}</div>
               </div>
@@ -22,16 +25,17 @@ export const ShowCategories = () => {
   )
 }
 
-const ShowMainList = () => {
-  const [videosList,setVideosList]=useState(YouTubeData);
-  useEffect(()=>{
+const ShowMainList = ({ open }: Props) => {
+  const [videosList, setVideosList] = useState(YouTubeData);
+  useEffect(() => {
     setVideosList(YouTubeData);
-  },[])
+  }, [])
   return (
-    <div style={{width:'85%'}}>
+    <div style={{ width: '85%',position:'relative' }}>
+      {open ? <HeaderNotification /> : ''}
       <ShowCategories />
-      <div style={{width:'95%',margin:'0 auto'}}>
-      <ShowMainListItems />
+      <div style={{ width: '95%', margin: '0 auto' }}>
+        <ShowMainListItems videosList={videosList} />
       </div>
     </div>
   )

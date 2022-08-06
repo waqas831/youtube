@@ -1,0 +1,45 @@
+.sidebar_list svg {
+  width: 1.7em;
+  height: 1.3em;
+  color: #909090;
+}
+.sidebar_title_color {
+  color: #030303;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: Roboto, Noto, sans-serif;
+}
+.sidebar_list {
+  /* background-color:#ccc; */
+  margin: 20px 0px;
+  line-height: 24px;
+}
+
+.border_botom_all {
+  border-bottom: 2px solid #ccc;
+}
+
+.categories_main_div {
+  border-top: 2px solid #ccc;
+  /* background-color: rgba(0, 0, 0, 0.05); */
+  border-bottom: 2px solid #ccc;
+}
+
+.categories_title_div {
+  /* padding:2px; */
+  background-color: rgba(0, 0, 0, 0.05);
+  color: #030303;
+  border: 2px solid #fff;
+  font-size: 14px;
+  font-family: Roboto, Noto, sans-serif;
+  padding: 10px;
+  margin-top: 6px;
+  margin-bottom: 6px;
+  margin-left: 10px;
+  border-radius: 100px;
+}
+.post_title {
+  color: #030303;
+  font-size: 14px;
+  font-family: Roboto, Noto, sans-serif;
+}
